@@ -23,6 +23,31 @@ When size of final JSON is a problem, just config JSON parser to not write defau
     String = "" or null
 ```
 
+For example:
+
+```JSON
+{
+    "id": "09737727398",
+    "name": "Igor Alexsander",
+    "age": 28,
+    "children": 0, 
+    "isMarried": false,
+    "pets": [],
+    "email": null,
+    "phone": ""
+}
+```
+
+```JSON
+{
+    "id": "09737727398",
+    "name": "Igor Alexsander",
+    "age": 28,
+}
+```
+
+Notice that in second JSON the fields `children`, `isMarried`, `pets`, `email` and `phone`, these fields had null, empty or default values, so we don't need to persist them, why when they are retrieved by the cache engine, the JSON serializer itself will take care of it.  
+
 ### 3. Avoid use of redis keys
 
 When we use `.keys("*")` in redis we are causing lock it. To prevent this we use a strategy where first off all we save all keys in list, after this we create another key and in its value we insert a list of keys generated and when we needs search some keys,
