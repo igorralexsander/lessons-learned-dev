@@ -4,9 +4,9 @@ Bringing together the knowledge obtained in the last experiences with the use of
 
 ## Sumary
 
-1. Random TTL
-2. Remove default and empty values from JSON
-3. Avoid use of redis keys
+1. [Random TTL](#1-random-ttl)
+2. [Remove default and empty values from JSON](#2-remove-default-and-empty-values-from-json)
+3. [Avoid use of redis keys](#3-avoid-use-of-redis-keys)
 
 ### 1. Random TTL
 
